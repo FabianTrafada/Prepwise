@@ -1,6 +1,5 @@
 import {
   FormControl,
-  FormDescription,
   FormItem,
   FormLabel,
   FormMessage,
@@ -16,7 +15,7 @@ interface FormFieldProps<T extends FieldValues> {
   type?: "text" | "email" | "password";
 }
 
-const FormFields = ({
+const FormFields = <T extends FieldValues>({
   name,
   control,
   label,
